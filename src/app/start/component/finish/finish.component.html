@@ -1,0 +1,75 @@
+<mat-toolbar-row class="game">
+  <button
+    (click)="resetGame()"
+    class="restart"
+    mat-mini-fab>
+    <mat-icon>settings_backup_restore</mat-icon>
+  </button>
+  <div class="game__prize">
+    <h1>გილოცავ !</h1>
+    <div class="money">
+      <mat-icon #icon>attach_money</mat-icon>
+      <h1>შენ მოიგე <b>1000</b> ლარი</h1>
+      <mat-icon #icon2>attach_money</mat-icon>
+    </div>
+  </div>
+
+  <div class="history">
+    <h2>თამაშის ისტორია</h2>
+    <div class="history__level">
+      <mat-list>
+        <div matSubheader>I ეტაპი</div>
+        <mat-list-item *ngFor="let i of ask[0]">
+          <div mat-line class="ask">{{i.ask}}</div>
+          <div mat-line *ngFor="let answer of i.answers">
+            <div class="answer">
+              <mat-icon
+                [style.color]="answer | key | color">
+                {{answer | key | icon}}
+              </mat-icon>
+              <p>{{answer | val}}</p>
+            </div>
+          </div>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+    </div>
+    <div class="history__level">
+      <mat-list>
+        <div matSubheader>II ეტაპი</div>
+        <mat-list-item *ngFor="let i of ask[1]">
+          <div mat-line class="ask">{{i.ask}}</div>
+          <div mat-line *ngFor="let answer of i.answers">
+            <div class="answer">
+              <mat-icon
+                [style.color]="answer | key | color">
+                {{answer | key | icon}}
+              </mat-icon>
+              <p>{{answer | val}}</p>
+            </div>
+          </div>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+    </div>
+
+    <div class="history__level">
+      <mat-list>
+        <div matSubheader>III ეტაპი</div>
+        <mat-list-item *ngFor="let i of ask[2]">
+          <div mat-line class="ask">{{i.ask}}</div>
+          <div mat-line *ngFor="let answer of i.answers">
+            <div class="answer">
+              <mat-icon
+                [style.color]="answer | key | color">
+                {{answer | key | icon}}
+              </mat-icon>
+              <p>{{answer | val}}</p>
+            </div>
+          </div>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</mat-toolbar-row>

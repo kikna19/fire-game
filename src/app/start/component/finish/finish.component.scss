@@ -1,0 +1,160 @@
+.game {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background: #FF8303;
+  padding-top: 5rem;
+
+  .restart {
+    position: absolute;
+    right: 5rem;
+    background: #860caf;
+  }
+
+  &__prize {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+    h1 {
+      font-family: "Arial Black";
+      font-size: 2.2rem;
+      margin-bottom: 3rem;
+      color: white;
+    }
+
+    .money {
+      display: inline-flex;
+      justify-content: space-between;
+      font-size: 2.2rem;
+      color: white;
+
+      mat-icon {
+        color: green;
+      }
+    }
+  }
+
+  .history {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    width: 40rem;
+    height: auto;
+    background: #393E46;
+
+    h2 {
+      color: #969696;
+      font-size: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    &__level {
+      width: 100%;
+      background: #222831;
+      margin-top: 3rem;
+
+
+      .level-game {
+        display: flex;
+        flex-direction: column;
+      }
+
+
+      .ask {
+        width: 100%;
+        margin-bottom: 2rem;
+        color: white;
+        font-size: 1.2rem;
+        white-space: break-spaces;
+        word-break: break-word;
+        line-height: 2rem;
+      }
+
+      .answer {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 2rem;
+        margin: 1rem;
+        padding: .2rem .5rem 0 .5rem;
+        background: white;
+
+        mat-icon {
+          font-size: 1.2rem;
+        }
+
+        p {
+          margin-top: .4rem;
+          font-size: 1rem;
+        }
+      }
+
+    }
+  }
+}
+
+@media (max-width: 700px) {
+
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  .restart {
+    right: 3rem !important;
+  }
+
+  .history {
+    width: 30rem !important;
+  }
+}
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .restart {
+    right: 3rem !important;
+  }
+
+  .history {
+    width: 25rem !important;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .restart {
+    right: 2rem !important;
+  }
+
+  .history {
+    width: 20rem !important;
+  }
+}
+
+@media (max-width: 350px) {
+  h1 {
+    font-size: 1.2rem !important;
+  }
+
+  .restart {
+    right: 1rem !important;
+  }
+
+  .history {
+    width: 17rem !important;
+  }
+}

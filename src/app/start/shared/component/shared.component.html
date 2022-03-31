@@ -1,0 +1,54 @@
+<mat-toolbar-row>
+  <div id="timer">
+    <figure class="time">
+      <div class="time__arrow" #arrow></div>
+      <svg width="200" height="200">
+        <circle
+          #circle
+          class="time__circle"
+          cx="95" cy="95" r="64"
+          transform="rotate(-90, 95, 95)"/>
+      </svg>
+    </figure>
+  </div>
+  <div id="score">
+    <div>{{prize + ' ₾'}}</div>
+  </div>
+
+
+  <main>
+    <div>
+      <h1>{{askArr[0][index].ask}}</h1>
+    </div>
+
+    <div #btns>
+      <button
+        type="button"
+        [style.background-color]="btnColors[0]"
+        [value]="answersArr[0] | key">
+        {{answersArr[0] | val}}
+      </button>
+      <button
+        type="button"
+        [style.background-color]="btnColors[1]"
+        [value]="answersArr[1] | key">
+        {{answersArr[1]  | val}}
+      </button>
+      <button
+        type="button"
+        [disabled]="btnStatus"
+        [style.background-color]="btnColors[2]"
+        [value]="answersArr[2] | key">
+        {{answersArr[2]  | val}}
+      </button>
+      <button
+        type="button"
+        [disabled]="btnStatus"
+        [style.background-color]="btnColors[3]"
+        [value]="answersArr[3] | key">
+        {{answersArr[3]  | val}}
+      </button>
+    </div>
+  </main>
+</mat-toolbar-row>
+

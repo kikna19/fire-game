@@ -1,0 +1,24 @@
+<div class="check">
+  <div class="check__header">{{answerText}}</div>
+
+  <div class="check__controls">
+    <button
+      id="next"
+      (click)="nextAsk()"
+      *ngIf="nextBtn"
+      mat-button
+      mat-dialog-close>
+      შემდეგი
+    </button>
+
+    <button
+      id="again"
+      *ngIf="againBtn"
+      mat-button
+      mat-dialog-close
+      (click)="tryAgain()">
+      თავიდან სცადე
+    </button>
+  </div>
+
+</div>

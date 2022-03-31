@@ -1,0 +1,33 @@
+::ng-deep .mat-dialog-container {
+  background: #1B1A17;
+  color: white;
+}
+
+.rules {
+  position: relative;
+  padding-left: 2rem;
+  width: 100%;
+
+  &__bar {
+    position: sticky;
+    top: 0;
+    height: .2rem;
+    background: #860caf;
+    border-radius: 1rem;
+  }
+
+
+  &__text {
+    display: block;
+    text-align: start;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0;
+
+    pre {
+      white-space: pre-line;
+      word-wrap: break-word;
+      text-align: start;
+    }
+  }
+}
